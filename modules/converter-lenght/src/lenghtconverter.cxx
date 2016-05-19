@@ -55,21 +55,18 @@ std::string LenghtConverter::operator()(int argc, const char** argv) {
                 "have wrong format!");
     ConverterLenght app(value, meas);
     if (app.getRetCode() == Data ::ERROR)
-        throw std::string("À value less than zero");
+        throw std::string("A value less than zero !");
     Unit result_meas;
     if (args._measure_result == "Centimeter")
             result_meas = Unit::CENTIMETERL;
-    else
-        if (args._measure_result == "Meter")
+    else if (args._measure_result == "Meter")
             result_meas = Unit::METERL;
-    else
-        if (args._measure_result == "Kilometer")
+    else if (args._measure_result == "Kilometer")
             result_meas = Unit::KILOMETERL;
-    else
-        if (args._measure_result == "Mile")
+    else if (args._measure_result == "Mile")
             result_meas = Unit::MILEL;
     else
-        throw std::string("Second measure " + args._measure +
+      throw std::string("Second measure " + args._measure +
            " have wrong format!");
 
     app.converter(result_meas);
