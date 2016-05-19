@@ -47,7 +47,7 @@ TEST_F(LenghtConverterTest, Can_Detect_Wrong_Number_Of_Arguments) {
 
     Act(args);
 
-    Assert("ERROR: Should be 3 argument");
+    Assert("ERROR: Should be 3 argument's.");
 }
 
 TEST_F(LenghtConverterTest, Can_Detect_Wrong_Single_Value_Format) {
