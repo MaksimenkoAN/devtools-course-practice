@@ -24,7 +24,7 @@ void LenghtConverter::help(const char *appname, const char *message) {
 
 bool LenghtConverter::validateNumberOfArguments(int argc, const char **argv) {
     if (argc != 4) {
-        help(argv[0], "ERROR: Should be 3 argument's. \n\n");
+        help(argv[0], "ERROR: Should be 3 arguments. \n\n");
         return false;
     }
     return true;
