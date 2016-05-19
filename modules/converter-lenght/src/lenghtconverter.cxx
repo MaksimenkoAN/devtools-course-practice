@@ -1,13 +1,11 @@
 // Copyright 2016 Maksimenko Alex
 
-#include "include\lenghtconverter.h"
-
 #include <string.h>
 
 #include <string>
 #include <sstream>
 
-#include "include\ConvertorLenght.h"
+#include "include\lenght_converter.h"
 
 LenghtConverter::LenghtConverter() : message_("") {}
 
