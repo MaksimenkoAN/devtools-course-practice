@@ -51,7 +51,7 @@ TEST_F(LenghtConverterTest, Can_Detect_Wrong_Number_Of_Arguments) {
 }
 
 TEST_F(LenghtConverterTest, Can_Detect_Wrong_Single_Value_Format) {
-    vector<string> args = { "-1.0", "Mile", "Meter" };
+    vector<string> args = { "-1", "Mile", "Meter" };
 
     Act(args);
 
