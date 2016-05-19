@@ -7,7 +7,7 @@
 
 #include "include/lenght_converter.h"
 
-LenghtConverter::LenghtConverter() : message_("") {}c
+LenghtConverter::LenghtConverter() : message_("") {}
 
 void LenghtConverter::help(const char *appname, const char *message) {
     message_ =
