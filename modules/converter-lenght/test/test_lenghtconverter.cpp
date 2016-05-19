@@ -10,7 +10,7 @@ using std::vector;
 using std::string;
 
 class LenghtConverterTest : public ::testing::Test {
-protected:
+ protected:
     void Act(vector<string> args_) {
         vector<const char*> options;
 
@@ -29,7 +29,7 @@ protected:
         EXPECT_TRUE(RE::PartialMatch(output_, RE(expected)));
     }
 
-private:
+ private:
     LenghtConverter app_;
     string output_;
 };
@@ -51,11 +51,11 @@ TEST_F(LenghtConverterTest, Can_Detect_Wrong_Number_Of_Arguments) {
 }
 
 TEST_F(LenghtConverterTest, Can_Detect_Wrong_Single_Value_Format) {
-    vector<string> args = { "-1.0", "Mile","Meter" };
+    vector<string> args = { "-1.0", "Mile", "Meter" };
 
     Act(args);
 
-    Assert("À value less than zero");
+    Assert("À value less than zero!");
 }
 
 TEST_F(LenghtConverterTest, Can_Convert_Centimeter_To_Centimeter) {
