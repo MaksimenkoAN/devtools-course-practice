@@ -5,7 +5,7 @@
 #include <string>
 #include <sstream>
 
-#include "include\lenght_converter.h"
+#include "include/lenght_converter.h"
 
 LenghtConverter::LenghtConverter() : message_("") {}
 
@@ -18,7 +18,8 @@ void LenghtConverter::help(const char *appname, const char *message) {
         " $" + std::string(appname) + " <number> <measure> " +
         "<result_measure>  \n\n"
         "Where <number> is valid positive number, and <measure> " +
-        "and <result_measure> is one of 'Centimeter', 'Meter', 'Kilometer', 'Mile'. \n";
+        "and <result_measure> is one of 'Centimeter', 'Meter'," +
+        " 'Kilometer', 'Mile'. \n";
 }
 
 bool LenghtConverter::validateNumberOfArguments(int argc, const char **argv) {
@@ -37,10 +38,9 @@ std::string LenghtConverter::operator()(int argc, const char** argv) {
     args._value = argv[1];
     args._measure = argv[2];
     args._measure_result = argv[3];
+    Unit meas;
 
     double value = atof(args._value.c_str());
-    
-    Unit meas;
     try {
         if (args._measure == "Centimeter")
             meas = Unit::CENTIMETERL;
@@ -50,10 +50,9 @@ std::string LenghtConverter::operator()(int argc, const char** argv) {
             meas = Unit::KILOMETERL;
         else if (args._measure == "Mile")
             meas = Unit::MILEL;
-        else {
+        else
             throw std::string("First measure " + args._measure +
                 "have wrong format!");
-            }
     ConverterLenght app(value, meas);
     if (app.getRetCode() == Data ::ERROR)
         throw std::string("À value less than zero");
@@ -69,16 +68,16 @@ std::string LenghtConverter::operator()(int argc, const char** argv) {
     else
         if (args._measure_result == "Mile")
             result_meas = Unit::MILEL;
-    else {
-           throw std::string("Second measure " + args._measure +
+    else
+        throw std::string("Second measure " + args._measure +
            " have wrong format!");
-         }
 
     app.converter(result_meas);
     std::ostringstream ost;
     ost << app.getValue();
     message_ = "The result of the conversion of a " + args._value + " " +
-    args._measure + " to " + args._measure_result + " number equal " + ost.str();
+    args._measure + " to " + args._measure_result +
+    " number equal " + ost.str();
     }
     catch (std::string str) {
         message_ = str;
