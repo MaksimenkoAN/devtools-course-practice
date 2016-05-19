@@ -4,7 +4,7 @@
 #define MODULES_CONVERTER_LENGHT_INCLUDE_LENGTH_CONVERTER_H_
 #include <string>
 
-#include "include\ConvertorLenght.h"
+#include "include\convertorlenght.h"
 
 class LenghtConverter {
 public:
