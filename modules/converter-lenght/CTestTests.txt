@@ -16,7 +16,7 @@ add_test(
     COMMAND ${APPLICATION}
 )
 set_tests_properties (${prefix}_can_Print_Help_Without_Arguments
-  PROPERTIES PASS_REGULAR_EXPRESSION "This is a roman number calculator application")
+  PROPERTIES PASS_REGULAR_EXPRESSION "This is a converter length application")
 
 add_test(
     NAME ${prefix}_can_Detect_Wrong_Number_Of_Arguments
@@ -30,7 +30,7 @@ add_test(
     COMMAND ${APPLICATION} -1.0 Mile Meter
 )
 set_tests_properties (${prefix}_can_Detect_Wrong_Single_Value_Format
-  PROPERTIES PASS_REGULAR_EXPRESSION "À value less than zero")
+  PROPERTIES PASS_REGULAR_EXPRESSION "Value less than zero!")
 
 add_test(
     NAME ${prefix}_can_Convert_Centimeter_To_Centimeter
@@ -58,7 +58,7 @@ add_test(
     COMMAND ${APPLICATION} 1.0 Mile Mile
 )
 set_tests_properties (${prefix}_can_Convert_Mile_To_Mile
-  PROPERTIES PASS_REGULAR_EXPRESSION "First roman number.*have wrong format!")
+  PROPERTIES PASS_REGULAR_EXPRESSION "1.0")
 
 add_test(
     NAME ${prefix}_can_Detect_Wrong_First_Measure_Format
