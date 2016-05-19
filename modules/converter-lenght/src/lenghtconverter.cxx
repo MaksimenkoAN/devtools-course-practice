@@ -55,7 +55,7 @@ std::string LenghtConverter::operator()(int argc, const char** argv) {
                 "have wrong format!");
     ConverterLenght app(value, meas);
     if (app.getRetCode() == Data ::ERROR)
-        throw std::string("A value less than zero !");
+        throw std::string("A value less than zero!");
     Unit result_meas;
     if (args._measure_result == "Centimeter")
             result_meas = Unit::CENTIMETERL;
