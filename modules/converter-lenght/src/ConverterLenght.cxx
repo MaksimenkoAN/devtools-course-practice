@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-#include "include/convertorlengh.h"
+#include "include/convertorlenght.h"
 
 ConverterLenght::ConverterLenght(const double val, Unit measure) {
     if (val > 0.0) {
