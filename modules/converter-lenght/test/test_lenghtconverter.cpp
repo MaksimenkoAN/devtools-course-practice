@@ -55,7 +55,7 @@ TEST_F(LenghtConverterTest, Can_Detect_Wrong_Single_Value_Format) {
 
     Act(args);
 
-    Assert("À value less than zero!");
+    Assert("A value less than zero!");
 }
 
 TEST_F(LenghtConverterTest, Can_Convert_Centimeter_To_Centimeter) {
