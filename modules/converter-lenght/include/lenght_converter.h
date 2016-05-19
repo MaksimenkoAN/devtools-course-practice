@@ -1,17 +1,17 @@
 // Copyright 2016 Maksimenko Alex
 
-#ifndef MODULES_CONVERTER_LENGHT_INCLUDE_LENGTH_CONVERTER_H_
-#define MODULES_CONVERTER_LENGHT_INCLUDE_LENGTH_CONVERTER_H_
+#ifndef MODULES_CONVERTER_LENGHT_INCLUDE_LENGHT_CONVERTER_H_
+#define MODULES_CONVERTER_LENGHT_INCLUDE_LENGHT_CONVERTER_H_
 #include <string>
 
 #include "include/convertorlenght.h"
 
 class LenghtConverter {
-public:
+ public:
     LenghtConverter();
     std::string operator()(int argc, const char** argv);
 
-private:
+ private:
     void help(const char* appname, const char* message = "");
     bool validateNumberOfArguments(int argc, const char** argv);
     std::string message_;
@@ -23,4 +23,4 @@ private:
     } Arguments;
 };
 
-#endif  // MODULES_CONVERTER_LENGHT_INCLUDE_LENGTH_CONVERTER_H_
+#endif  // MODULES_CONVERTER_LENGHT_INCLUDE_LENGHT_CONVERTER_H_
