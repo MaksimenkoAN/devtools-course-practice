@@ -1,11 +1,10 @@
 // Copyright 2016 Maksimenko Alex
 
-#include <string>
-
 #include <stdlib.h>
 #include <stdio.h>
+#include <string>
 
-#include "lenghtconverter.h"
+#include "include\lenghtconverter.h"
 
 int main(int argc, const char** argv) {
     LenghtConverter app;
